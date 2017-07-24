@@ -1,0 +1,219 @@
+/*login page*/
+.login_tab{
+    text-align: center;
+    border: 0;
+    padding: .7rem;
+    margin-bottom: -20px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+.login_tab li {
+    width: 50%;
+}
+.login_tab .nav-link.active{
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+    border-color: #ddd #ddd #fff;
+}
+.login_tab .nav-link {
+    border: 0;
+    color: #fff;
+}
+.login_tab_content{
+    padding: 2rem 1rem 1rem;
+    z-index: 1
+}
+.login_tab_content .btn-deep-purple{
+    width: 100%;
+}
+.social-login{
+    text-align:center;
+    font-size:12px;
+    margin-bottom: 30px;
+}
+.social-login p{
+    margin:15px 0;
+}
+.social-login ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.social-login ul li{
+    width:33%;
+    float:left;
+    clear:fix;
+}
+.social-login ul li a{
+    font-size:13px;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 0;
+    display:block;
+}
+.social-login ul li:nth-child(1) a{
+    background:#3b5998;
+}
+.social-login ul li:nth-child(2) a{
+    background:#e74c3d;
+}
+.social-login ul li:nth-child(3) a{
+    background:#3698d9;
+}
+.radio label{
+    padding-left: 5px;
+    display: inline-block;
+    line-height: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.radio input{
+    margin-left:20px;
+}
+section.signup {
+    margin-top: 4rem;
+}
+section.signup ul.advantages-list {
+    margin-top: 16px;
+}
+section.signup ul.advantages-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.mt-1{
+    color:#fff;
+}
+.mt-1 h1{
+    font-weight: 500;
+}
+.btn-outline-primary {
+    border: 2px solid #fff;
+    color: #fff!important;
+    background-color: transparent;
+}
+/**/
+.progilr-card-up{
+        overflow: hidden;
+    height: 120px;
+}
+.profile-avatar{
+        overflow: hidden;
+    height: 120px;
+    border-radius: 50%;
+    width: 120px;
+    margin: -65px auto 0;
+    border: 5px solid #fff;
+    background: #FFF;
+}
+.profile-avatar img{
+    width: 100%;
+}
+.grey-text {
+    color: #9e9e9e !important;
+}
+.text-center {
+    text-align: center!important;
+}
+ul.striped li {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.striped{
+    padding: 10px;
+}
+.profile-card{
+    padding: 20px;
+}
+.user-box img {
+    margin: 0 auto 10px auto;
+    max-width: 80px;
+}
+/*edit profile*/
+.card-cascade.narrower .view {
+    margin-top: -20px;
+}
+.admin-panel .view {
+    padding: 1rem;
+    text-align: center;
+}
+.white-skin .primary-color {
+    background-color: #4285F4 !important;
+}
+.card-cascade .view{
+    border-radius: 4px;
+}
+.card-cascade .view{
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.admin-panel .view h5 {
+    color: #fff;
+    margin-bottom: 0;
+}
+.card-cascade .card-block {
+    padding-top: 1.8rem;
+}
+
+.card .card-block {
+    position: relative;
+}
+.contact-card .contact-avatar {
+    background: #fff;
+    padding: 3px;
+    border: 2px solid #4285F4;
+}
+.contact-card img {
+    border-radius: 50%;
+    max-width: 130px;
+}
+.show-tick.btn-default {
+    background: #fff!important;
+}
+
+.show-tick.btn {
+     font-size: none;
+    padding: none; 
+    border-radius: none 
+    border: none; 
+    color: none; 
+     margin: none ;
+     white-space: none; 
+}
+.u-info .profile-img {
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+}
+#sel1{
+        padding: 7px;
+    margin-top: 17px;
+}
+.showkundali{
+    display: none;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+/* STYLES GO HERE */
+.radio label {
+    padding-left: 3px!important;
+    display: inline-block;
+    line-height: 25px;
+    cursor: pointer;
+    font-size: 11px!important;
+}
+.radio input {
+    margin-left: 7px!important;
+}
+}
+/*smartphone 5 inches*/
+@media only screen
+and (min-width : 360px)
+and (max-width : 480px) {
+/* STYLES GO HERE */
+.radio label {
+    font-size: 15px!important;
+}
+}

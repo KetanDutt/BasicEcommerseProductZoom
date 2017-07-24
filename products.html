@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title><?php  if (!empty($is_blog)) :
+    echo $CI->fuel->blog->page_title($page_title, ' : ', 'right');
+    else:
+    echo fuel_var('page_title', '');
+    endif;
+    ?></title>
+    <meta name="keywords" content="<?php echo fuel_var('meta_keywords')?>">
+    <meta name="description" content="<?php echo fuel_var('meta_description')?>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+    <meta name="Robots" content="follow, index, all">
+    <meta name="googlebot" content="index, follow">
+    <meta name="document-type" content="public">
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="<?php echo base_url(uri_string()); ?>" />
+    <meta name="geo.region" content="India"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="en-US">
+    <meta name="country" content="India"/>
+    <meta name="robots" content="ALL"/>
+    <meta name="msvalidate.01" content="44581133950047FAEB6B6201B2EF18FF" />
+    <?php echo link_tag('assets/images/favicon.ico', 'shortcut icon', 'image/ico'); ?>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/marriageprediction.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        (function(a,e,c,f,g,h,b,d){var k={ak:"871730050",cl:"m8niCP_ho2sQgpfWnwM",autoreplace:"9599564835"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5TDFNQ');</script>
+<!-- End Google Tag Manager -->                                                                                                                          
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TDFNQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</head>
+<body>
+    <!-- Start your project here-->
+    <div id="mySidenav" class="sidenav">
+        <ul id="slide-out" class="side-nav fixed custom-scrollbar ps-container ps-theme-default ps-active-y">
+
+            <!-- Logo -->
+            <li>
+              <div class="logo-wrapper waves-light waves-effect waves-light">
+                <a href="<?php echo base_url('/'); ?>"><img src="img/logo1.png" class="img-fluid flex-center"></a>
+            </div>
+        </li>
+        <!--/. Logo -->
+
+        <!--Social-->
+        <li>
+          <ul class="social">
+            <li><a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+            <li><a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+            <li><a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+            <li><a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+        </ul>
+    </li>
+    <!--/Social-->
+
+
+
+    <!-- Side navigation links -->
+    <li>
+      <ul class="collapsible collapsible-accordion">
+        <li><a class="collapsible-header waves-effect arrow-r" href="<?php echo base_url('/'); ?>"><span class="home"></span> Home</a>
+
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample"><span class="astrology"></span> Astrology<i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapse" id="collapseExample1">
+            <div class="collapseitem">
+              <ul>
+                <li><a class="collapsible-header waves-effect arrow-r" data-toggle="collapse" href="#marriage" aria-expanded="false" aria-controls="collapseExample"><span class="marriageicon"></span> Marriage<i class="fa fa-angle-down rotate-icon"></i></a>
+                  <div class="collapse" id="marriage">
+                    <div class="collapseitem">
+                      <ul>
+                       <li><a href="<?php echo base_url('/astrology/marriage-kundali-matching'); ?>" class="waves-effect">Kundali Milan</a>
+                       </li>
+                       <li><a href="<?php echo base_url('/astrology/online-marriage-prediction'); ?>" class="waves-effect">Marriage Prediction</a>
+                       </li>
+                       <li><a href="<?php echo base_url('/astrology/manglik-dosha-solution'); ?>" class="waves-effect">Manglik Dosh</a>
+                       </li>
+                       <li><a href="<?php echo base_url('/astrology/child-pregnancy'); ?>" class="waves-effect">Child & Pregnancy</a>
+                       </li>
+                        <!-- <li><a href="#" class="waves-effect">Marriage Problems</a>
+                    </li> -->
+                    <li><a href="<?php echo base_url('/astrology/love-marriage-relationships'); ?>" class="waves-effect">Love Marriage</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li><a class="collapsible-header waves-effect arrow-r" data-toggle="collapse" href="#career" aria-expanded="false" aria-controls="collapseExample"><span class="careericon"></span> Carrer<i class="fa fa-angle-down rotate-icon"></i></a>
+      <div class="collapse" id="career">
+        <div class="collapseitem">
+          <ul>
+            <li><a href="<?php echo base_url('/astrology/online-career-and-jobr'); ?>" class="waves-effect">Job & Career</a>
+            </li>
+            <li><a href="<?php echo base_url('/astrology/online-career-and-jobr'); ?>" class="waves-effect">Prediction & Analysis</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</li>
+
+<li><a class="collapsible-header waves-effect arrow-r" data-toggle="collapse" href="#health" aria-expanded="false" aria-controls="collapseExample"><span class="healthicon"></span> Health<i class="fa fa-angle-down rotate-icon"></i></a>
+  <div class="collapse" id="health">
+    <div class="collapseitem">
+      <ul>
+        <li><a href="<?php echo base_url('/astrology/medical-and-health'); ?>" class="waves-effect">Health</a>
+        </li>
+        <li><a href="<?php echo base_url('/astrology/medical-and-health'); ?>" class="waves-effect">Prediction & Analysis</a>
+        </li>
+    </ul>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+</div>
+</li>
+<li><a class="collapsible-header waves-effect arrow-r" href="<?php echo base_url('/puja'); ?>"><span class="pujaicon"></span> Puja</a>
+
+</li>
+<li><a class="collapsible-header waves-effect arrow-r" href="<?php echo base_url('/product/articles'); ?>"><span class="articleicon"></span> Articles</a>
+
+</li>
+<li><a class="collapsible-header waves-effect arrow-r" href="tel:+919599564835"><span class="fa fa-phone"></span> 9599564835</a>
+</li>
+        <!-- <li><a class="collapsible-header waves-effect arrow-r" href="<?php echo base_url('/product'); ?>"><i class="fa fa-magic"></i>Products</a>
+
+    </li> -->
+</ul>
+<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 281px; right: 0px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 158px;"></div></div></ul>
+</div>
+
+<!--Navbar-->
+<nav class="navbar navbar-fixed-top scrolling-navbar collapsenav">
+   <div class="float-xs-left menu1 bars">
+      <a id="barmenu" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+  </div>
+  <div class="breadcrumb-dn logo1">
+      <a href="<?php echo base_url('/'); ?>"><img src="img/logo1.png" class="img-fluid flex-center"></a>
+  </div>
+  <ul class="nav navbar-nav float-xs-left menu1">
+   <li class="nav-item ">
+      <a class="nav-link waves-effect waves-light" href="<?php echo base_url('/'); ?>"><span class="hidden-sm-down">Home</span></a>
+  </li>
+  <li class="nav-item dropdown">
+      <a id="contact" class="nav-link waves-effect waves-light contact" href="<?php echo base_url('/astrology'); ?>"> <span class="hidden-sm-down">Astrology</span></a>
+
+      <div class="dropdown-content card">
+        <div class="row">
+          <div class="col-md-4">
+             <ul class="navlink">
+              <li style="font-weight: 500;color:#ec3333;">Marriage<i class="fa fa-caret-right" aria-hidden="true"></i></li><hr>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/marriage-kundali-matching'); ?>">Kundali Milan</a></li>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/online-marriage-prediction'); ?>">Marriage Prediction</a></li>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/manglik-dosha-solution'); ?>">Manglik Dosh</a></li>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/child-pregnancy'); ?>">Child & Pregnancy</a></li>
+              <!-- <li><a class="dropdown-item waves-effect waves-light">Marriage Problems</a></li> -->
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/love-marriage-relationships'); ?>">Love marriage</a></li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+         <ul class="navlink">
+            <li style="font-weight: 500;color:#ec3333;">Health<i class="fa fa-caret-right" aria-hidden="true"></i></li><hr>
+            <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/medical-and-health'); ?>">Health</a></li>
+            <li><a href="<?php echo base_url('/astrology/medical-and-health'); ?>" class="dropdown-item waves-effect waves-light">Prediction & Analysis</a></li>
+
+        </ul>
+    </div>
+    <div class="col-md-4">
+       <ul class="navlink">
+          <li style="font-weight: 500;color:#ec3333;">Career<i class="fa fa-caret-right" aria-hidden="true"></i></li><hr>
+          <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/online-career-and-job'); ?>">Job & career</a></li>
+          <li><a href="<?php echo base_url('/astrology/online-career-and-job'); ?>" class="dropdown-item waves-effect waves-light">Prediction & Analysis</a></li>
+      </ul>
+  </div>
+</div>
+</div>
+</li>
+<li class="nav-item ">
+  <a class="nav-link waves-effect waves-light" href="<?php echo base_url('/puja'); ?>"><span class="hidden-sm-down">Puja</span></a>
+</li>
+ <li class="nav-item dropdown">
+      <a id="contact" class="nav-link waves-effect waves-light contact"> <span class="hidden-sm-down">Services</span></a>
+
+      <div class="dropdown-content card" style="min-width:120px!important;right:0px;height:115px!important">
+        <div class="row">
+          <div class="col-md-12">
+             <ul class="navlink">
+             
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/marriage-kundali-matching'); ?>">Vastu</a></li>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/online-marriage-prediction'); ?>">Numerology</a></li>
+              <li><a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrology/manglik-dosha-solution'); ?>">Palmistry</a></li>
+          </ul>
+      </div>
+</div>
+</div>
+</li>
+<li class="nav-item ">
+  <a class="nav-link waves-effect waves-light" href="<?php echo base_url('/product/articles'); ?>"> <span class="hidden-sm-down">Articles</span></a>
+</li>
+<!-- <li class="nav-item ">
+  <a class="nav-link waves-effect waves-light" href="<?php echo base_url('/products'); ?>"> <span class="hidden-sm-down">Products</span></a>
+</li> -->
+
+</ul>
+<ul class="nav navbar-nav float-xs-right menu1">
+   <li class="nav-item dropdown">
+      <a class="signup nav-link dropdown-toggle waves-effect waves-light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Book Now</a>
+      <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+        <a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/astrologer'); ?>">Book Astrologer</a>
+        <a class="dropdown-item waves-effect waves-light" href="<?php echo base_url('/puja/book-pandit'); ?>">Book Pandit</a>
+    </div>
+</li>
+</ul>
+</nav>
+<!--/.Navbar-->
+<div style="height:150px;"></div>
+
+<div class="container">
+  <div class="row">
+  <ol class="breadcrumb" style="background-color:#fff">
+                      <li class="breadcrumb-item">Home</li>
+                      <li class="breadcrumb-item">Products</li>
+                      <li class="breadcrumb-item">Gems</li>
+                  </ol>
+    <div class="col-md-3">
+      <div class="sidebar">
+                        <!-- Panel -->
+                        <h5><strong>Category</strong></h5>
+                        <div class="divider"></div>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Ruby</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox2">
+                                <label for="checkbox2">Neelam</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox3">
+                                <label for="checkbox3">Category 3</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox4" checked="checked">
+                                <label for="checkbox4">Category 4</label>
+                            </li>
+
+                          
+                        </ul>
+
+                        <!-- Filter by color-->
+                        <h5 class="pt-2"><strong>Style</strong></h5>
+                        <div class="divider"></div>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="checkbox9" checked="checked">
+                                <label for="checkbox9">Ring</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox12">
+                                <label for="checkbox10">Brasslette</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox11">
+                                <label for="checkbox11">Eear-rings</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="checkbox12">
+                                <label for="checkbox12">Neckless</label>
+                            </li>
+                        </ul>
+
+                        
+                    </div>
+    </div>
+    <div class="col-md-9">
+      
+<!--Section: Products v.2-->
+<section class="section" style="padding-top:0px;padding-bottom:0px">
+
+  
+    <!--First row-->
+    <div class="row">
+
+        <!--First column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Shoes</h5></a>
+                    <h4 class="card-title"><strong><a href="">Pink sneakers</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                      <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/First column-->
+
+        <!--Second column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(6).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Accessories</h5></a>
+                    <h4 class="card-title"><strong><a href="">Blue summer hat</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                       <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(7).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Clothes</h5></a>
+                    <h4 class="card-title"><strong><a href="">White long sweater</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                       <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/Third column-->
+  <!--First column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Shoes</h5></a>
+                    <h4 class="card-title"><strong><a href="">Pink sneakers</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                       <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/First column-->
+
+        <!--Second column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(6).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Accessories</h5></a>
+                    <h4 class="card-title"><strong><a href="">Blue summer hat</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                       <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-lg-4 col-md-6 mb-r">
+
+            <!--Card-->
+            <div class="card card-cascade wider">
+
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(7).jpg" class="img-fluid" alt="">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-block text-center">
+                    <!--Category & Title-->
+                    <a href="" class="text-muted"><h5>Clothes</h5></a>
+                    <h4 class="card-title"><strong><a href="">White long sweater</a></strong></h4>
+
+                    <!--Description-->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                      <a class="btn btn-rounded waves-effect waves-light" href="https://www.akashvaani.com/blog/astrological-prediction-for-love-marriage-and-relationship">Buy Now</a>
+                    </div>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+        </div>
+        <!--/Third column-->
+    </div>
+    <!--/First row-->
+
+</section>
+<!--/Section: Products v.2-->
+<div class="results-showMoreContainer"><div class="results-showmore"><!-- react-text: 1859 -->Show More Products (<!-- /react-text --><!-- react-text: 1860 -->23<!-- /react-text --><!-- react-text: 1861 -->) <!-- /react-text --></div></div>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<footer class="page-footer center-on-small-only mdb-color darken-4">
+  <!--Footer Links-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <!--First column-->
+      <div class="col-md-3 offset-md-1">
+          <div class="footerlogo"></div>
+          <p>We are the fastest growing company when it comes to Vedic services and spiritual solutions.</p>
+          <p>Our Domain expertise is in all kinds of Pujas & rituals, astrological consultancy and Vastu services, and giving all kinds of Vedic solutions and services under one umbrella.</p>
+      </div>
+      <!--/.First column-->
+
+      <hr class="hidden-md-up">
+
+      <!--Second column-->
+      <div class="col-md-2 offset-md-1">
+        <h5 class="title">Company</h5>
+        <ul>
+          <li><a href="<?php echo base_url('/aboutus.htm'); ?>">About</a></li>
+          <li><a href="<?php echo base_url('/terms-condition.htm'); ?>">Terms & Condition</a></li>
+          <li><a href="<?php echo base_url('/privacy-policy.htm'); ?>">Privacy</a></li>
+          <li><a href="<?php echo base_url('/bookings/payment'); ?>">Booking Request</a></li>
+      </ul>
+  </div>
+  <!--/.Second column-->
+
+  <hr class="hidden-md-up">
+
+  <!--Third column-->
+  <div class="col-md-2">
+    <h5 class="title">Get In Touch</h5>
+    <ul class="footer-nav pb20">
+        <li class="footer-phone"><span class="fa fa-phone"></span> 959 956 4835</li>
+        <li class="footer-address osLight">
+            <p>246, First Floor,</p>
+            <p>Sector-45, Gurgaon 122003</p>
+            <p>India</p>
+        </li>
+    </ul>
+    <div class="col-md-12" style="padding:20px;"> 
+        <a href="https://www.facebook.com/iamakashvaani/" target="_blank"><span class="fa  fa-facebook-square" style="font-size:40px;"></span> </a>
+        <a href="https://twitter.com/iamakashvaani" target="_blank" class="twitter" ><span class="fa fa-twitter-square" style="font-size:40px;"></span></a>
+        <a href="https://plus.google.com/+Akashvaani" target="_blank"><span class=" fa fa-google-plus-square" target="_blank" style="font-size:40px;"></span> </a>
+    </div>
+</div>
+<!--/.Third column-->
+<div class="col-md-2">
+    <h5 class="title">Payment Option</h5>
+    <div class="payment"></div>
+
+</div>
+<hr class="hidden-md-up">
+
+
+
+</div>
+</div>
+<!--/.Footer Links-->
+
+<hr>
+
+
+
+<!--Copyright-->
+<div class="footer-copyright">
+  <div class="container-fluid">
+   2015 Copyright: <a href="http://www.akahvaani.com"> Akashvaani.com </a>
+
+</div>
+</div>
+<!--/.Copyright-->
+
+</footer>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/tether.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script>
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv"){  // if click is not in 'mydiv'
+    $('#serviceDiv').hide();
+}
+});
+
+ function linkselect(linkid){
+    document.getElementById("mydiv").value=linkid;
+     //$('#datelabel').addClass( 'active' );
+ }
+ function openNav() {
+    document.getElementById("mySidenav").style.width = "240px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+$("body").click(function(e){
+    if(e.target.className == "fa fa-bars")
+    {
+       openNav();
+   }
+});
+$("body").click(function(e){
+    if(e.offsetX > 240)
+    {
+       closeNav();
+   }
+});
+$(".carousel-caption").click(function(e){
+    closeNav();
+});
+function showDiv() {
+ document.getElementById('serviceDiv').style.display = "block";
+}
+
+
+</script>
+<script type="text/javascript">
+
+    $('#next1').on('click', function(){
+        $('#step1').removeClass('active');
+        $('#pane21').removeClass('active in');
+        $('#step2').addClass('active');
+        $('#pane23').addClass('active in');
+    });
+    $('#next2').on('click', function(){
+        $('#pane23').addClass('active in');
+        $('#pane22').removeClass('active in');
+        $('#step2').removeClass('active');
+        $('#step3').addClass('active');
+    });
+    $('#prev1').on('click', function(){
+        $('#pane21').addClass('active in');
+        $('#pane22').removeClass('active in');
+    });
+    $('#next3').on('click', function(){
+        $('#pane24').addClass('active in');
+        $('#pane23').removeClass('active in');
+        $('#step3').removeClass('active');
+        $('#step4').addClass('active');
+    });
+    $('#prev2').on('click', function(){
+        $('#pane21').addClass('active in');
+        $('#pane23').removeClass('active in');
+    })
+    $('#next4').on('click', function(){
+        $('#pane25').addClass('active in');
+        $('#pane24').removeClass('active in');
+        $('#step4').removeClass('active');
+        $('#step5').addClass('active');
+    });
+    $('#prev3').on('click', function(){
+        $('#pane23').addClass('active in');
+        $('#pane24').removeClass('active in');
+    })
+    $('#next5').on('click', function(){
+        $('#pane26').addClass('active in');
+        $('#pane25').removeClass('active in');
+        $('#step5').removeClass('active');
+        $('#step6').addClass('active');
+    });
+    $('#prev4').on('click', function(){
+        $('#pane24').addClass('active in');
+        $('#pane25').removeClass('active in');
+    })
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "240px";
+        $("#mySidenav").addClass("active");
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        $("#mySidenav").removeClass("active");
+    }
+    $("body").click(function(e){
+        if(e.target.className == "fa fa-bars")
+        {
+         openNav();
+     }
+ });
+    $("body").click(function(e){
+        if(e.offsetX > 240)
+        {
+         closeNav();
+     }
+ });
+    function showDiv() {
+     document.getElementById('dateDiv').style.display = "block";
+ }
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv"){  // if click is not in 'mydiv'
+    $('#dateDiv').hide();
+}
+});
+ function showDiv1() {
+     document.getElementById('monthDiv').style.display = "block";
+ }
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv1"){  // if click is not in 'mydiv'
+    $('#monthDiv').hide();
+}
+});
+ function showDiv2() {
+     document.getElementById('yearDiv').style.display = "block";
+ }
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv2"){  // if click is not in 'mydiv'
+    $('#yearDiv').hide();
+}
+});
+ function showDiv3() {
+     document.getElementById('hourDiv').style.display = "block";
+ }
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv3"){  // if click is not in 'mydiv'
+    $('#hourDiv').hide();
+}
+});
+ function showDiv4() {
+     document.getElementById('minuteDiv').style.display = "block";
+ }
+ $(document).click(function(e) {
+  if(e.target.id!="mydiv4"){  // if click is not in 'mydiv'
+    $('#minuteDiv').hide();
+}
+});
+ $(function(){ /* to make sure the script runs after page load */
+
+    $('a.read_more').click(function(event){ /* find all a.read_more elements and bind the following code to them */
+
+        event.preventDefault(); /* prevent the a from changing the url */
+        $(this).parents('.bq-primary').find('.more_text').show();
+        $(this).parents('.bq-primary').find('.read_more').hide(); /* show the .more_text span */
+        /* show the .more_text span */
+
+    });
+    $('a.read_less').click(function(event){ /* find all a.read_more elements and bind the following code to them */
+
+        event.preventDefault(); /* prevent the a from changing the url */
+        $(this).parents('.bq-primary').find('.more_text').hide();
+        $(this).parents('.bq-primary').find('.read_more').show(); /* show the .more_text span */
+        /* show the .more_text span */
+
+    });
+
+});
+ function dateselect(dateid){
+    document.getElementById("mydiv").value=dateid;
+    $('#datelabel').addClass( 'active' );
+}
+function monthselect(monthid){
+    document.getElementById("mydiv1").value=monthid;
+    $('#monthlabel').addClass( 'active' );
+}
+function yearselect(yearid){
+    document.getElementById("mydiv2").value=yearid;
+    $('#yearlabel').addClass( 'active' );
+}
+function hourselect(hourid){
+    document.getElementById("mydiv3").value=hourid;
+    $('#hourlabel').addClass( 'active' );
+}
+function minuteselect(minuteid){
+    document.getElementById("mydiv4").value=minuteid;
+    $('#minutelabel').addClass( 'active' );
+}
+
+$("#pane131").click(function() {
+   $('#earlytab').addClass( 'active' );
+   $('#latetab').removeClass( 'active' );
+   $('#denialtab').removeClass( 'active' );
+});
+$("#pane132").click(function() {
+   $('#earlytab').removeClass( 'active' );
+   $('#latetab').addClass( 'active' );
+   $('#denialtab').removeClass( 'active' );
+});
+$("#pane133").click(function() {
+   $('#earlytab').removeClass( 'active' );
+   $('#latetab').removeClass( 'active' );
+   $('#denialtab').addClass( 'active' );
+});
+$(".closeresult").click(function() {
+    $('#collapseResult').removeClass('collapse in');
+    $('#collapseResult').addClass('collapse');
+});
+</script>
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+    };
+    date_input.datepicker(options);
+})
+</script>
+<div class="drag-target" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div>
+</body>
+
+</html>
