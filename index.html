@@ -1,51 +1,237 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Zoom Plugin</title>
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./css/style (2).css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="A polished, dependency-free product page demonstrating an accessible, responsive product image zoom gallery.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Fieldnote — Product image zoom demo</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/green-stone-light.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/site.css">
+  <script defer src="js/jqzoom.js"></script>
+  <script defer src="js/storefront.js"></script>
 </head>
 <body>
-<h1 >Zoom Plugin</h1>
-	<div class="bzoom_wrap">
-        <ul id="bzoom">
-            <li>
-                <img class="bzoom_thumb_image" src="img.jpg" title="first img" />
-                <img class="bzoom_big_image" src="img.jpg"/>
-            </li>
-            <li>
-                <img class="bzoom_thumb_image" src="img.png"/>
-                <img class="bzoom_big_image" src="img.png"/>
-            </li>
-        </ul>
+  <a class="skip-link" href="#main">Skip to product</a>
+
+  <div class="demo-banner" role="note">
+    <span class="demo-banner__mark" aria-hidden="true"></span>
+    <p><strong>Interactive sample store</strong><span> — no checkout, inventory or shipping is connected.</span></p>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="./" aria-label="Fieldnote home">
+        <svg class="wordmark__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <path d="M20 2.5 36 11.7v16.6L20 37.5 4 28.3V11.7L20 2.5Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="m20 9 8.8 5.1v11.8L20 31l-8.8-5.1V14.1L20 9Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="m20 9 4.5 8.2L20 31l-4.5-13.8L20 9Z" fill="currentColor" opacity=".78"/>
+        </svg>
+        <span class="wordmark__type"><span>FIELDNOTE</span><small>OBJECTS, OBSERVED</small></span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#product">The object</a>
+        <a href="#specifications">Specifications</a>
+        <a href="#about-demo">About this demo</a>
+      </nav>
+
+      <button class="bag-trigger" type="button" data-open-bag aria-haspopup="dialog" aria-controls="bag-dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.5 8h13l1 12h-15l1-12Z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg>
+        <span>Sample bag</span>
+        <span class="bag-count" data-bag-count aria-label="0 items in bag">0</span>
+      </button>
     </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="#product">Objects</a><span aria-hidden="true">/</span><span aria-current="page">Green gemstone study</span>
+    </nav>
+
+    <section class="product-layout" id="product" aria-labelledby="product-title">
+      <div class="gallery-column">
+        <div class="section-kicker gallery-kicker"><span>01</span><span>IMAGE STUDY</span></div>
+
+        <div class="product-gallery" id="product-gallery" data-product-zoom data-zoom-factor="2.35" role="group" aria-label="Product image gallery">
+          <div class="gallery-frame">
+            <div class="gallery-thumbnails" role="group" aria-label="Choose a product view">
+              <button class="gallery-thumbnail" type="button" data-gallery-item data-src="assets/green-stone-light.jpg" data-zoom-src="assets/green-stone-light.jpg" data-alt="An oval-shaped green gemstone held between gem tweezers against a light studio background." data-caption="01 — Soft light" data-tone="light" aria-label="View 1: Soft light" aria-pressed="true">
+                <img src="assets/green-stone-light-thumb.jpg" alt="" width="320" height="320" fetchpriority="high">
+              </button>
+              <button class="gallery-thumbnail" type="button" data-gallery-item data-src="assets/green-stone-dark.jpg" data-zoom-src="assets/green-stone-dark.jpg" data-alt="The same oval-shaped green gemstone and tweezers against a black studio background." data-caption="02 — Dark ground" data-tone="dark" aria-label="View 2: Dark ground" aria-pressed="false">
+                <img src="assets/green-stone-dark-thumb.jpg" alt="" width="320" height="320" loading="lazy">
+              </button>
+              <button class="gallery-thumbnail" type="button" data-gallery-item data-src="assets/green-stone-detail.jpg" data-zoom-src="assets/green-stone-detail.jpg" data-alt="A closer crop of the green gemstone, showing its oval outline and visible surface detail." data-caption="03 — Stone detail" data-tone="light" aria-label="View 3: Stone detail" aria-pressed="false">
+                <img src="assets/green-stone-detail-thumb.jpg" alt="" width="320" height="320" loading="lazy">
+              </button>
+            </div>
+
+            <div class="gallery-media" data-zoom-region>
+              <button class="gallery-image-button" type="button" data-zoom-toggle aria-label="Zoom in on the gemstone" aria-pressed="false">
+                <img class="gallery-image gallery-image--light" data-zoom-image src="assets/green-stone-light.jpg" alt="An oval-shaped green gemstone held between gem tweezers against a light studio background." width="1500" height="1500" decoding="async" fetchpriority="high">
+                <span class="zoom-hint"><span class="zoom-hint__icon" aria-hidden="true">+</span><span data-zoom-hint>Hover or tap to inspect</span></span>
+              </button>
+              <span class="gallery-index" data-gallery-index aria-hidden="true">01 <i>/</i> 03</span>
+              <button class="gallery-expand" type="button" data-lightbox-open aria-haspopup="dialog" aria-label="Open the product image full screen">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4H4v4M16 4h4v4M20 16v4h-4M4 16v4h4"/></svg>
+                <span>View larger</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-footer">
+            <div class="gallery-caption-block">
+              <span class="gallery-caption" data-gallery-caption>01 — Soft light</span>
+              <span class="gallery-help">Move across the image to magnify.</span>
+            </div>
+            <div class="gallery-pagination" role="group" aria-label="Gallery navigation">
+              <button class="round-control" type="button" data-gallery-prev aria-label="Previous image" title="Previous image">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14.5 5-7 7 7 7"/></svg>
+              </button>
+              <span class="gallery-count" data-gallery-count aria-live="polite">01 <i>/</i> 03</span>
+              <button class="round-control" type="button" data-gallery-next aria-label="Next image" title="Next image">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5 7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="visually-hidden" data-gallery-status aria-live="polite" aria-atomic="true"></p>
+        </div>
+
+        <div class="gallery-note"><span class="gallery-note__dot" aria-hidden="true"></span><p>Three views, one stone. Choose a thumbnail or use the arrows to compare backgrounds and detail.</p></div>
+      </div>
+
+      <div class="product-info">
+        <div class="product-overline"><span class="product-overline__rule" aria-hidden="true"></span><span>FIELDNOTE / SPECIMEN 001</span></div>
+        <h1 id="product-title">Oval green<br>gemstone</h1>
+        <p class="product-intro">A richly colored stone shown from a little closer. Switch between the studio views, then move over the image to explore its surface.</p>
+
+        <div class="price-row">
+          <div><span class="price-label">Sample price</span><p class="product-price" data-product-price data-price-cents="42000">$420.00</p></div>
+          <span class="price-context">USD <span aria-hidden="true">·</span> example only</span>
+        </div>
+
+        <div class="product-tags" role="group" aria-label="Visible characteristics">
+          <span>Green</span><span>Oval shape</span><span>Loose stone</span>
+        </div>
+
+        <div class="product-caveat">
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2.25 18 16H2l8-13.75Z"/><path d="M10 7v4.3m0 2.5v.05"/></svg>
+          <p>Demonstration content only. Gemstone identity, weight, origin and treatment have not been verified.</p>
+        </div>
+
+        <div class="purchase-panel">
+          <div class="purchase-panel__top">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-control">
+              <button type="button" data-quantity-step="-1" aria-label="Decrease quantity" title="Decrease quantity">−</button>
+              <input id="quantity" type="number" min="1" max="9" step="1" value="1" inputmode="numeric" data-quantity aria-describedby="quantity-help">
+              <button type="button" data-quantity-step="1" aria-label="Increase quantity" title="Increase quantity">+</button>
+            </div>
+            <span id="quantity-help" class="visually-hidden">Choose from one to nine sample items.</span>
+          </div>
+          <button class="button-primary" type="button" data-add-to-bag>
+            <span>Add sample to bag</span><span class="button-primary__price" data-add-button-price>$420.00</span>
+          </button>
+          <div class="purchase-actions">
+            <button class="text-action wishlist-button" type="button" data-wishlist aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.2 8.5c0 5.1-8.2 10.1-8.2 10.1S3.8 13.6 3.8 8.5a4.2 4.2 0 0 1 7.1-3l1.1 1.1 1.1-1.1a4.2 4.2 0 0 1 7.1 3Z"/></svg>
+              <span data-wishlist-label>Save for later</span>
+            </button>
+            <span class="purchase-actions__note">Stored where browser storage is available</span>
+          </div>
+          <p class="purchase-footnote">The sample bag is stored in this browser only. No order or payment is placed.</p>
+          <p class="visually-hidden" data-store-status aria-live="polite" aria-atomic="true"></p>
+        </div>
+
+        <div class="product-disclosures" id="specifications">
+          <details class="product-disclosure">
+            <summary><span>Specifications</span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m4 7 6 6 6-6"/></svg></summary>
+            <dl class="spec-list">
+              <div><dt>Visible color</dt><dd>Green</dd></div>
+              <div><dt>Shape in photograph</dt><dd>Oval</dd></div>
+              <div><dt>Carat weight</dt><dd>Not provided</dd></div>
+              <div><dt>Identity / origin</dt><dd>Not verified</dd></div>
+              <div><dt>Treatment details</dt><dd>Not provided</dd></div>
+            </dl>
+          </details>
+          <details class="product-disclosure">
+            <summary><span>Shipping &amp; returns</span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m4 7 6 6 6-6"/></svg></summary>
+            <p class="disclosure-copy">This demo does not connect to fulfillment or returns. Add accurate, legally reviewed store policies before using a product page for real sales.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closer-look" aria-labelledby="closer-title">
+      <div class="closer-look__eyebrow"><span>02</span><span>THE GALLERY</span></div>
+      <div class="closer-look__content">
+        <div>
+          <p class="eyebrow">BUILT FOR THE DETAILS</p>
+          <h2 id="closer-title">A better look,<br><em>at your pace.</em></h2>
+        </div>
+        <div class="closer-look__copy">
+          <p>The gallery is designed to work with a mouse, keyboard or touch screen. Select a view, magnify the image, or open the larger viewer to move between photographs.</p>
+          <ul>
+            <li><span>01</span> Hover or tap the photo to zoom.</li>
+            <li><span>02</span> Use the thumbnail rail or arrow keys to change views.</li>
+            <li><span>03</span> Open the full-screen viewer for an expanded look.</li>
+          </ul>
+          <a class="inline-link" href="#product">Return to the product <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="closer-look__image" aria-hidden="true">
+        <img src="assets/green-stone-detail.jpg" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+        <span>DETAIL VIEW / 03</span>
+      </div>
+    </section>
+
+    <aside class="demo-disclaimer" id="about-demo" aria-labelledby="demo-title">
+      <div class="demo-disclaimer__icon" aria-hidden="true">i</div>
+      <div><p class="eyebrow">PLEASE NOTE</p><h2 id="demo-title">A front-end demonstration</h2><p>This project is a static sample, not a live shop. Product facts and the displayed price are placeholders; cart and saved-item state stay in your browser. There is no payment, inventory, customer account or fulfillment service.</p></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-wordmark" href="./">FIELDNOTE <span>OBJECTS, OBSERVED</span></a>
+    <p>Product image zoom · static UI demo</p>
+    <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog class="bag-dialog" id="bag-dialog" data-bag-dialog aria-labelledby="bag-title" aria-describedby="bag-description">
+    <div class="dialog-inner">
+      <header class="dialog-header">
+        <div><p class="eyebrow">LOCAL DEMO</p><h2 id="bag-title">Your sample bag <span class="dialog-count" data-dialog-bag-count>(0)</span></h2></div>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="Close sample bag" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </header>
+      <p class="visually-hidden" id="bag-description">A browser-only sample cart. Checkout is not connected.</p>
+      <div class="bag-lines" data-bag-lines></div>
+      <div class="bag-empty" data-bag-empty>
+        <span aria-hidden="true">◇</span><p>Your sample bag is empty.</p><button class="text-action" type="button" data-dialog-close>Continue exploring <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="bag-summary" data-bag-summary hidden>
+        <div><span>Sample subtotal</span><strong data-bag-total>$0.00</strong></div>
+        <p>For demonstration only. Taxes, shipping and payment are not calculated.</p>
+        <button class="button-primary button-primary--disabled" type="button" disabled aria-disabled="true">Checkout unavailable</button>
+        <button class="text-action bag-continue" type="button" data-dialog-close>Continue exploring</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="lightbox-dialog" data-lightbox-dialog aria-labelledby="lightbox-title">
+    <h2 class="visually-hidden" id="lightbox-title">Expanded product image</h2>
+    <div class="lightbox-header">
+      <div><span class="eyebrow">FIELDNOTE / 001</span><span class="lightbox-caption" data-lightbox-caption>01 — Soft light</span></div>
+      <button class="dialog-close dialog-close--light" type="button" data-dialog-close aria-label="Close expanded image" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="lightbox-stage">
+      <button class="lightbox-arrow" type="button" data-lightbox-prev aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14.5 5-7 7 7 7"/></svg></button>
+      <img data-lightbox-image src="assets/green-stone-light.jpg" alt="An oval-shaped green gemstone held between gem tweezers against a light studio background." width="1500" height="1500" decoding="async">
+      <button class="lightbox-arrow" type="button" data-lightbox-next aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5 7 7-7 7"/></svg></button>
+    </div>
+    <div class="lightbox-footer"><span data-lightbox-count>01 <i>/</i> 03</span><p>Use the arrow keys to move between views. Press Escape to close.</p></div>
+  </dialog>
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="./js/jqzoom.js"></script>
-<script type="text/javascript">
-$("#bzoom").zoom({
-	zoom_area_width: 300,
-    autoplay_interval :3000,
-    small_thumbs : 2,
-    autoplay : false
-});
-</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
 </html>
